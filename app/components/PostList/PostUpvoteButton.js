@@ -2,12 +2,11 @@
 
 import { useState } from "react";
 
-const PostUpvoteButton = ({ upvotes, children }) => {
+const PostUpvoteButton = ({ upvotes }) => {
   const [upvoteCount, setUpvoteCount] = useState(upvotes);
 
   return (
     <>
-      {children}
       <button onClick={() => setUpvoteCount(upvoteCount + 1)}>
         {upvoteCount} Upvotes
       </button>
